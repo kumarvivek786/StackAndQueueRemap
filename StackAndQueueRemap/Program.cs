@@ -14,6 +14,15 @@ namespace StackAndQueueRemap
             stack.push(70);
             stack.push(30);
             stack.push(56);
+            stack.print();
+            while (!stack.isEmpty())
+            {
+                Console.WriteLine();
+                stack.peek();
+                stack.pop();
+                stack.print();
+                Console.WriteLine();
+            }
             Console.ReadLine();
         }
     }

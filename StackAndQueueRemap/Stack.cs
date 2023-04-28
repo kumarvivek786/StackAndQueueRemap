@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackAndQueueRemap
 {
-    internal class Stack
+    public class Stack
     {
         public LinkedList linkedlist;
 
@@ -19,6 +19,27 @@ namespace StackAndQueueRemap
         {
             linkedlist.add(data);
             Console.WriteLine("{0} pushed to stack ", data);
+        }
+        public void print()
+        {
+            linkedlist.display();
+        }
+        public void peek()
+        {
+            Console.WriteLine(linkedlist.peek());
+        }
+
+        public bool isEmpty()
+        {
+            if (linkedlist.size() == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public int pop()
+        {
+            return linkedlist.pop();
         }
     }
 }

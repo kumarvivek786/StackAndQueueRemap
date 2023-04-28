@@ -7,8 +7,9 @@ using System.Xml.Linq;
 
 namespace StackAndQueueRemap
 {
-    internal class LinkedList
+    public class LinkedList
     {
+
         Node head;
 
 
@@ -26,7 +27,7 @@ namespace StackAndQueueRemap
             }
         }
 
-        int pop()
+        public int pop()
         {
             int deleted = head.data;
             head = head.next;
@@ -72,6 +73,23 @@ namespace StackAndQueueRemap
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
+
+        }
+        public int peek()
+        {
+            return head.data;
+        }
+
+        public int size()
+        {
+            int count = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            return count;
         }
     }
 }
